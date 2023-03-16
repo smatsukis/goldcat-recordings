@@ -660,7 +660,7 @@ Header Style
 @media (max-width: 767px) {
     .background-header .main-nav .nav,
     .header-area .main-nav .nav {
-        background-color: #f1f0fe;
+        background-color: #333333;
     }
     .background-header .main-nav .nav li a,
     .header-area .main-nav .nav li a {
@@ -673,8 +673,8 @@ Header Style
     }
     .background-header .main-nav .nav li,
     .header-area .main-nav .nav li {
-        border-top: 1px solid #ddd;
-        background-color: #ffffff;
+        border-top: 1px solid #333333;
+        background-color: #333333;
         height: 50px;
         border-radius: 0px 0px 25px 25px;
     }
