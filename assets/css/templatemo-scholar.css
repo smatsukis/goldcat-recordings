@@ -138,14 +138,38 @@ li {
 }
 
 .image-container img {
-    height: 65%;
-    width: auto;
+    /* height: 65%;
+    width: auto; */
     /* set the height of the image to 65% of the container height */
+    height: auto;
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
     .image-container {
         justify-content: center;
+        padding: 0px;
+    }
+    .image-container img {
+        /* height: 65%;
+        width: auto; */
+        /* set the height of the image to 65% of the container height */
+        height: auto;
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-container img {
+        height: 70%;
+        width: auto;
+        /* set the height of the image to 40% of the container height on screens smaller than 768px */
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        padding: 0px;
     }
 }
 
@@ -173,6 +197,15 @@ body {
 
 a {
     text-decoration: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+    /* Add your styles here for smaller screens */
+    body {
+        margin: 0;
+        padding: 0 15px;
+        /* Add padding to the left and right edges of the body */
+    }
 }
 
 h1,
@@ -669,18 +702,18 @@ Header Style
         font-weight: 400;
         color: #fff;
         background-color: #333333;
-        border-radius: 0px 0px 25px 25px;
+        border-radius: 0px 0px 0px 0px;
     }
     .background-header .main-nav .nav li,
     .header-area .main-nav .nav li {
         border-top: 1px solid #333333;
         background-color: #333333;
         height: 50px;
-        border-radius: 0px 0px 25px 25px;
+        border-radius: 0px 0px 0px 0px;
     }
     .background-header .main-nav .nav li:last-child,
     .header-area .main-nav .nav li:last-child {
-        border-radius: 0px 0px 25px 25px;
+        border-radius: 0px 0px 0px 0px;
     }
     .header-area .main-nav .nav {
         height: auto;
@@ -689,7 +722,7 @@ Header Style
     .header-area .main-nav .logo {
         position: absolute;
         left: 30px;
-        top: 0px;
+        top: 5px;
     }
     .background-header .main-nav .logo {
         top: 0px;
@@ -744,17 +777,38 @@ Header Style
         border-top: 1px solid #eee;
     }
     .header-area.header-sticky .nav {
-        margin-top: 100px !important;
+        margin-top: 80px !important;
     }
     .background-header.header-sticky .nav {
-        margin-top: 80px !important;
+        margin-top: 70px !important;
     }
     .header-area .main-nav .nav li {
         width: 100%;
-        background: #fff;
+        background: #eab716;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+}
+
+.flag {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 0.5em;
+}
+
+.flag-sa {
+    background-image: url('../images/sa.png');
+    font-size: 2em;
+}
+
+.flag-usa {
+    background-image: url('../images/usa.png');
+    font-size: 2.5em;
 }
 
 
@@ -769,7 +823,7 @@ Banner Style
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 170px 0px 120px 0px;
+    padding: 170px 0px 90px 0px;
 }
 
 .main-banner .item {
@@ -896,8 +950,8 @@ Services Style
 }
 
 .services .service-item .icon {
-    width: 130px;
-    height: 130px;
+    width: 90px;
+    height: 90px;
     display: inline-block;
     text-align: center;
     line-height: 150px;
@@ -905,7 +959,17 @@ Services Style
     border-radius: 50%;
     position: absolute;
     right: 0;
-    top: -90px;
+    top: -50px;
+}
+
+.services-icon {
+    display: block;
+    /* Display the icon as a block element */
+    margin: 0 auto 5px;
+    /* Center the icon horizontally and add a small amount of margin at the bottom */
+    padding-bottom: 10px;
+    color: #eab716;
+    /* Set the text color to the desired hex value */
 }
 
 .services .service-item .icon img {
@@ -915,10 +979,10 @@ Services Style
 
 .services .service-item .main-content {
     border-radius: 25px;
-    padding: 80px 30px 50px 30px;
+    padding: 20px 30px 30px 20px;
     background-color: #333333;
     margin-bottom: 30px;
-    margin-right: 80px;
+    /* margin-right: 80px; */
     transition: all .4s;
 }
 
