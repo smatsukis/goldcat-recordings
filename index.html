@@ -29,6 +29,29 @@ TemplateMo 586 Scholar
 https://templatemo.com/tm-586-scholar
 
 -->
+
+        <style>
+        @media (min-width: 768px) {
+            .row.services-equal-height {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .row.services-equal-height > [class^="col-"] {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .row.services-equal-height .service-item {
+                flex-grow: 1;
+            }
+
+            .main-content.box,
+            .main-content.box2 {
+                height: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body style="background-color:#171710">
@@ -120,7 +143,7 @@ https://templatemo.com/tm-586-scholar
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row services-equal-height">
                 <div class="col-lg-4 col-md-12">
                     <div class="service-item" style="text-align: center;">
                         <div class="main-content box">
@@ -530,49 +553,6 @@ https://templatemo.com/tm-586-scholar
         </div>
     </footer>
 
-    <script>
-        // get all the divs with the class "box"
-        var boxes = document.querySelectorAll('.box');
-
-        // set the initial maximum height to 0
-        var maxHeight = 0;
-
-        // loop through each div and get its height
-        for (var i = 0; i < boxes.length; i++) {
-            var boxHeight = boxes[i].offsetHeight;
-
-            // update the maximum height if the current div's height is greater
-            if (boxHeight > maxHeight) {
-                maxHeight = boxHeight;
-            }
-        }
-
-        // set the height of all the divs to the maximum height
-        for (var i = 0; i < boxes.length; i++) {
-            boxes[i].style.height = maxHeight + 'px';
-        }
-
-
-        var boxes_2 = document.querySelectorAll('.box2');
-
-        // set the initial maximum height to 0
-        var maxHeight = 0;
-
-        // loop through each div and get its height
-        for (var i = 0; i < boxes_2.length; i++) {
-            var boxHeight = boxes_2[i].offsetHeight;
-
-            // update the maximum height if the current div's height is greater
-            if (boxHeight > maxHeight) {
-                maxHeight = boxHeight;
-            }
-        }
-
-        // set the height of all the divs to the maximum height
-        for (var i = 0; i < boxes_2.length; i++) {
-            boxes_2[i].style.height = maxHeight + 'px';
-        }
-    </script>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
